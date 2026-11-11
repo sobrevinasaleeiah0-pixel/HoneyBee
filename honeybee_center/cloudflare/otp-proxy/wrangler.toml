@@ -1,0 +1,7 @@
+name = "honeybee-otp-proxy"
+main = "src/index.mjs"
+compatibility_date = "2026-10-16"
+workers_dev = true
+
+[vars]
+SUPABASE_URL = "https://gvteqrtvpfujfrwrdohv.supabase.co"

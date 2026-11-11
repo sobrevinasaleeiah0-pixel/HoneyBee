@@ -1,0 +1,143 @@
+{
+  "test_name": "YOLOv8n ONNX Generic Bottle Detection",
+  "timestamp": "2026-11-09T22:37:32Z",
+  "model": {
+    "path": "C:\\Users\\DeLL\\Desktop\\honeybee_center\\python_bridge\\models\\yolov8n.onnx",
+    "size_bytes": 12834838,
+    "target_input_shape": [
+      640,
+      640
+    ],
+    "coco_class_id": 39,
+    "confidence_threshold": 0.4,
+    "nms_threshold": 0.45
+  },
+  "images": {
+    "200g_001.jpg": {
+      "original_path": "C:\\Users\\DeLL\\Desktop\\HoneyBottleDataset\\images\\200g_001.jpg",
+      "dimensions": {
+        "width": 1080,
+        "height": 1920
+      },
+      "bottles_detected": 1,
+      "detections": [
+        {
+          "class_id": 39,
+          "class_name": "bottle",
+          "confidence": 0.8934,
+          "bbox": {
+            "x1": 348.0,
+            "y1": 105.0,
+            "x2": 747.0,
+            "y2": 1539.0
+          },
+          "width": 399.0,
+          "height": 1434.0
+        }
+      ],
+      "timing_ms": {
+        "prep_ms": 70.95,
+        "infer_ms": 558.47,
+        "post_ms": 13.67,
+        "total_ms": 643.1
+      },
+      "annotated_output_path": "C:\\Users\\DeLL\\Desktop\\honeybee_center\\python_bridge\\test_output\\pilot_detections\\200g_001_detected.jpg"
+    },
+    "200g_002.jpg": {
+      "original_path": "C:\\Users\\DeLL\\Desktop\\HoneyBottleDataset\\images\\200g_002.jpg",
+      "dimensions": {
+        "width": 1080,
+        "height": 1920
+      },
+      "bottles_detected": 1,
+      "detections": [
+        {
+          "class_id": 39,
+          "class_name": "bottle",
+          "confidence": 0.8312,
+          "bbox": {
+            "x1": 297.0,
+            "y1": 99.0,
+            "x2": 774.0,
+            "y2": 1791.0
+          },
+          "width": 477.0,
+          "height": 1692.0
+        }
+      ],
+      "timing_ms": {
+        "prep_ms": 33.67,
+        "infer_ms": 1875.49,
+        "post_ms": 14.06,
+        "total_ms": 1923.22
+      },
+      "annotated_output_path": "C:\\Users\\DeLL\\Desktop\\honeybee_center\\python_bridge\\test_output\\pilot_detections\\200g_002_detected.jpg"
+    },
+    "200g_003.jpg": {
+      "original_path": "C:\\Users\\DeLL\\Desktop\\HoneyBottleDataset\\images\\200g_003.jpg",
+      "dimensions": {
+        "width": 1080,
+        "height": 1920
+      },
+      "bottles_detected": 1,
+      "detections": [
+        {
+          "class_id": 39,
+          "class_name": "bottle",
+          "confidence": 0.5007,
+          "bbox": {
+            "x1": 294.0,
+            "y1": 57.0,
+            "x2": 801.0,
+            "y2": 1854.0
+          },
+          "width": 507.0,
+          "height": 1797.0
+        }
+      ],
+      "timing_ms": {
+        "prep_ms": 69.88,
+        "infer_ms": 419.36,
+        "post_ms": 15.46,
+        "total_ms": 504.69
+      },
+      "annotated_output_path": "C:\\Users\\DeLL\\Desktop\\honeybee_center\\python_bridge\\test_output\\pilot_detections\\200g_003_detected.jpg"
+    },
+    "200g_004.jpg": {
+      "original_path": "C:\\Users\\DeLL\\Desktop\\HoneyBottleDataset\\images\\200g_004.jpg",
+      "dimensions": {
+        "width": 1080,
+        "height": 1920
+      },
+      "bottles_detected": 1,
+      "detections": [
+        {
+          "class_id": 39,
+          "class_name": "bottle",
+          "confidence": 0.842,
+          "bbox": {
+            "x1": 339.0,
+            "y1": 93.0,
+            "x2": 765.0,
+            "y2": 1593.0
+          },
+          "width": 426.0,
+          "height": 1500.0
+        }
+      ],
+      "timing_ms": {
+        "prep_ms": 21.04,
+        "infer_ms": 383.39,
+        "post_ms": 8.29,
+        "total_ms": 412.73
+      },
+      "annotated_output_path": "C:\\Users\\DeLL\\Desktop\\honeybee_center\\python_bridge\\test_output\\pilot_detections\\200g_004_detected.jpg"
+    }
+  },
+  "summary": {
+    "total_images": 4,
+    "images_with_detections": 4,
+    "total_bottles_detected": 4,
+    "mean_inference_ms": 809.18
+  }
+}

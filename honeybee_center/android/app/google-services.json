@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "272404530546",
+    "project_id": "honeybee-center",
+    "storage_bucket": "honeybee-center.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272404530546:android:8a88060cf5085feff109eb",
+        "android_client_info": {
+          "package_name": "com.example.honeybee_center"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-leXzsYkhkOWviQ5ycAcGrKZ2-0Sapyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

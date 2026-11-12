@@ -1328,9 +1328,6 @@ class _InventoryPageState extends State<InventoryPage> {
         return StreamBuilder<DatabaseEvent>(
           stream: _scanResultsStream,
           builder: (context, snap) {
-            if (cmdSnap.hasError || snap.hasError) {
-              return _buildScannerUnavailable();
-            }
             final pending = <Map<String, dynamic>>[];
             if (snap.hasData && snap.data?.snapshot.value != null) {
               final raw = Map<String, dynamic>.from(
@@ -1354,12 +1351,41 @@ class _InventoryPageState extends State<InventoryPage> {
             }
 
             final darkInfo = Theme.of(context).brightness == Brightness.dark;
+            final isScannerOffline = cmdSnap.hasError || snap.hasError;
+
             return ListView(
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 24),
               children: [
-                // ── Start Scan panel ────────────────────────────────────────
+                // ── Start Scan & ESP32 Camera panel ───────────────────────────
                 _buildStartScanPanel(scanInProgress),
                 const SizedBox(height: 16),
+
+                if (isScannerOffline)
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 16),
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.amber.withAlpha(25),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Colors.amber.withAlpha(80)),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.info_outline, color: Colors.amber, size: 20),
+                        const SizedBox(width: 10),
+                        const Expanded(
+                          child: Text(
+                            'Firebase scan queue is currently unreachable. You can still stream the ESP32 camera and configure IP settings directly above.',
+                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: _retryScannerConnection,
+                          child: const Text('Retry'),
+                        ),
+                      ],
+                    ),
+                  ),
 
                 // ── How it works (collapsible) ───────────────────────────────
                 Container(
